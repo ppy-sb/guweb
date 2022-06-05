@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %} Home {% endblock %}
+{% block title %} {{ t('global.home') }} {% endblock %}
 
 {% block header %}
 <link rel="stylesheet" href="/static/css/pages/home.css">
@@ -15,16 +15,16 @@
       <div class='noti-col noti-col-label'>
         <div class='noti-bannertype'>
           {% if status=='error' %}
-          Warning
+            {{ t('global.warning') }}
           {% elif status=='success' %}
-          Notice
+            {{ t('global.notice') }}
           {% endif %}
         </div>
         <div class='noti-bannertext'>
           {% if status=='error' %}
-          Uh oh! Be careful!
+          {{ t('global.uh-oh-be-careful') }}
           {% elif status=='success' %}
-          Hey! Listen!
+            {{ t('global.hey-listen')}}
           {% endif %}
         </div>
       </div>
